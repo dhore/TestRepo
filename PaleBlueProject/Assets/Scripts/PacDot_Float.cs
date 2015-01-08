@@ -23,10 +23,4 @@ public class PacDot_Float : MonoBehaviour {
 		else
 			transform.Translate(0, speed*Time.deltaTime, 0);
 	}
-
-	void OnCollisionEnter (Collision coll)
-	{
-		if (coll.transform.tag == "Player")
-			Destroy (this.gameObject);
-	}
 }
