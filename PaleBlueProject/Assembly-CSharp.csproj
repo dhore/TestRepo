@@ -46,7 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\NavMesh.cs" />
+     <Compile Include="Assets\PacDots\NavMesh.cs" />
      <Compile Include="Assets\Scripts\ContinueForward.cs" />
      <Compile Include="Assets\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Scripts\PacDot_Float.cs" />
