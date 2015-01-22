@@ -1,29 +1,49 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Timers;
 
 public class Ghost_Spawning : MonoBehaviour {
-
-	public GameObject[] ghost = new GameObject[4];
-	float cooldown;
+	
+	public GameObject ghost0;
+	public GameObject ghost1;
+	public GameObject ghost2;
+	public GameObject ghost3;
 	int ghostNum = 4;
+	Timer cooldownTimer;
+	int ghostToSpawn = -1;
 
-	// Use this for initialization
+	
 	void Start () {
-		ResetCooldown();
+		OnCooldownFinish(null, null);
+		cooldownTimer = new System.Timers.Timer(10000d);
+		cooldownTimer.Elapsed += new ElapsedEventHandler(OnCooldownFinish);
+		cooldownTimer.AutoReset = true;
+		cooldownTimer.Enabled = true;
+	}
+
+	void Update(){
+		switch(ghostToSpawn)
+		{
+		case 0:
+			GameObject obj1 = Instantiate(ghost0) as GameObject;
+			break;
+		case 1:
+			GameObject obj2 = Instantiate(ghost1) as GameObject;
+			break;
+		case 2:
+			GameObject obj3 = Instantiate(ghost2) as GameObject;
+			break;
+		case 3:
+			GameObject obj4 = Instantiate(ghost3) as GameObject;
+			break;
+		default:
+			break;
+		}
+		ghostToSpawn = -1;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		if(cooldown < Time.deltaTime)
-		{
-			ResetCooldown();
-			GameObject obj = Instantiate(ghost[ghostNum % 4]) as GameObject;
-			ghostNum++;
-		}
-	}
-
-	// Resets Cooldown Period
-	void ResetCooldown(){
-		cooldown = Time.deltaTime + 12.0f;
+	void OnCooldownFinish(object source, ElapsedEventArgs e){
+		ghostToSpawn = ghostNum % 4;
+		ghostNum++;
 	}
 }
