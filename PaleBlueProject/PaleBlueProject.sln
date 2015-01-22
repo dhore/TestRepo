@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{CBEB3B45-1A72-80CA-F6E9-621ABF49531E}") = "PaleBlueProject", "Assembly-CSharp.csproj", "{3D17E07B-AA3A-B4B7-7A0E-84CAF9D33775}"
 EndProject
-Project("{CBEB3B45-1A72-80CA-F6E9-621ABF49531E}") = "PaleBlueProject", "Assembly-UnityScript-firstpass.unityproj", "{430F2DF0-BE9A-7ED0-3C7E-F880B8A90370}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,15 +13,11 @@ Global
 		{3D17E07B-AA3A-B4B7-7A0E-84CAF9D33775}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D17E07B-AA3A-B4B7-7A0E-84CAF9D33775}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D17E07B-AA3A-B4B7-7A0E-84CAF9D33775}.Release|Any CPU.Build.0 = Release|Any CPU
-		{430F2DF0-BE9A-7ED0-3C7E-F880B8A90370}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{430F2DF0-BE9A-7ED0-3C7E-F880B8A90370}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{430F2DF0-BE9A-7ED0-3C7E-F880B8A90370}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{430F2DF0-BE9A-7ED0-3C7E-F880B8A90370}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																											GlobalSection(MonoDevelopProperties) = preSolution
+																														GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
