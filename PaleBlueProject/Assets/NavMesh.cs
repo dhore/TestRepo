@@ -4,10 +4,11 @@ using System.Collections;
 public class NavMesh : MonoBehaviour {
 
 	NavMeshAgent navMeshAgent;
-	public GameObject player;
+	GameObject player;
 
 	// Use this for initialization
 	void Start () {
+		player = GameObject.FindWithTag("Player");
 		navMeshAgent = GetComponent<NavMeshAgent>();
 	}
 	
