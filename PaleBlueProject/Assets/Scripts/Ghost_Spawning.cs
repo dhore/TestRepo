@@ -15,7 +15,7 @@ public class Ghost_Spawning : MonoBehaviour {
 	
 	void Start () {
 		OnCooldownFinish(null, null);
-		cooldownTimer = new System.Timers.Timer(10000d);
+		cooldownTimer = new System.Timers.Timer(9000d);
 		cooldownTimer.Elapsed += new ElapsedEventHandler(OnCooldownFinish);
 		cooldownTimer.AutoReset = true;
 		cooldownTimer.Enabled = true;

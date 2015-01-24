@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(AudioSource))]
 public class Shoot_Controller : MonoBehaviour {
 
 	public GameObject bullet;
@@ -15,6 +16,7 @@ public class Shoot_Controller : MonoBehaviour {
 			{
 				GameObject obj = Instantiate(bullet, transform.position, transform.rotation) as GameObject;
 				obj.rigidbody.AddForce(transform.forward * 900, ForceMode.Force);
+				audio.Play();
 				canShoot = false;
 				shootCooldown = 0.7f;
 			}
